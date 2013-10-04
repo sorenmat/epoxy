@@ -1,6 +1,6 @@
 epoxy is a binding "framework". It's created using typescript, it should be very easy to understand and use.
 
-The dependency is kept at a minimum. Currently oit nly depends on jquery for the test.ts file.
+The dependency is kept at a minimum. Currently it only depends on jquery for the test.ts file.
 
 
 How does it work
