@@ -1,5 +1,10 @@
+
+// Service interface for validating and executing the model
 interface Service<T> {
+    // Execute method, this could be a post to a REST service or something like that
     execute(obj :T) :void;
+
+    // Method for validating the model object, this again could be a REST service
     validate(obj :T) :void;
 }
 
