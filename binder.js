@@ -5,8 +5,8 @@ var Binder = (function () {
     Binder.prototype.bind = function (obj, field, htmlField, service) {
         // bind an onchange event to the field
         htmlField.onchange = function (event) {
-            console.log("field changed: " + event.currentTarget.value);
-            obj[field] = event.currentTarget.value;
+            console.log("field changed: " + (event.currentTarget).value);
+            obj[field] = (event.currentTarget).value;
             document.getElementById(field).style.color = "black";
             service.validate(obj);
         };
@@ -19,4 +19,3 @@ var Binder = (function () {
     };
     return Binder;
 })();
-//# sourceMappingURL=binder.js.map

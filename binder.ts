@@ -5,11 +5,11 @@ interface Service<T> {
 
 class Binder {
     // binds a value from the htmlField to the field of the object
-    bind(obj:any, field:string, htmlField:HTMLElement, service:Service) {
+    bind(obj:any, field:string, htmlField:HTMLElement, service:Service<any>) {
         // bind an onchange event to the field
         htmlField.onchange = function (event) {
-            console.log("field changed: " + event.currentTarget.value);
-            obj[field] = event.currentTarget.value; // update the value of the object, from the value of the field
+            console.log("field changed: " + (<HTMLInputElement>event.currentTarget).value);
+            obj[field] = (<HTMLInputElement>event.currentTarget).value; // update the value of the object, from the value of the field
             document.getElementById(field).style.color = "black"; // reset the color to the "default"
             service.validate(obj)
         }

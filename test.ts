@@ -22,7 +22,7 @@ class CreatePerson {
     }
 }
 
-class PersonService implements Service {
+class PersonService implements Service<CreatePerson> {
     execute(person:CreatePerson) {
         $.ajax({
             type: "POST",
