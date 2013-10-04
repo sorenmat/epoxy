@@ -26,7 +26,7 @@ class PersonService implements Service<CreatePerson> {
     execute(person:CreatePerson) {
         $.ajax({
             type: "POST",
-            url: "http://localhost:9000/testPost",
+            url: "http://localhost:9000/createPerson",
             data: person,
             dataType: "json",
             async: false,
@@ -41,7 +41,7 @@ class PersonService implements Service<CreatePerson> {
     validate(person:CreatePerson) {
         $.ajax({
             type: "POST",
-            url: "http://localhost:9000/testPost",
+            url: "http://localhost:9000/validatePerson",
             data: JSON.stringify(person),
             contentType: 'application/json',
             dataType: 'json',
