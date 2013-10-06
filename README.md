@@ -10,11 +10,11 @@ The basic idea is that it binds some HTML fields to a javascript model. When eve
 
 It provides a Service interface that has two methods that should be implemented. 
 
-* validate
+* ___validate___
 	
     The validate method is executed to validate the model. 
 
-* execute
+* ___execute___
 	
     Execute the model, this could be a post to a server.
 
