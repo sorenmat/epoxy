@@ -15,10 +15,15 @@
 </form>
     <script>
         $( document ).ready(function() {
+            // Create the car service, this is used to validate the model
             var service = new CarService()
+            // Create the binder using epoxy
             var binder = new Binder()
+
+            // Create the model used in this example
             var carModel = new CreateCar("BMW", 3, 4);
 
+            // Bind the HTML fields to the model and service
             binder.bind(carModel, CreateCar.metaMake, document.getElementById(CreateCar.metaMake), service);
             binder.bind(carModel, CreateCar.metaAge, document.getElementById(CreateCar.metaAge), service);
             binder.bind(carModel, CreateCar.metaWheels, document.getElementById(CreateCar.metaWheels), service);
