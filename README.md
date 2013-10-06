@@ -20,7 +20,7 @@ It provides a Service interface that has two methods that should be implemented.
 
 
 
-This basic idea is illustrated in the test.html and test.ts file.
+This basic idea is illustrated in the example.html and local_example.ts file.
 
 Installation
 ===
