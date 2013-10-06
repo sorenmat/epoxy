@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="binder.js"></script>
+    <script src="local_example.js"></script>
+</head>
+<body>
+<form>
+    Make: <input id="make"/><br/>
+    Age: <input id="age"><br/>
+    # wheels: <input id="wheels">
+
+</form>
+    <script>
+        $( document ).ready(function() {
+            var service = new CarService()
+            var binder = new Binder()
+            var carModel = new CreateCar("BMW", 3, 4);
+
+            binder.bind(carModel, CreateCar.metaMake, document.getElementById(CreateCar.metaMake), service);
+            binder.bind(carModel, CreateCar.metaAge, document.getElementById(CreateCar.metaAge), service);
+            binder.bind(carModel, CreateCar.metaWheels, document.getElementById(CreateCar.metaWheels), service);
+        });
+    </script>
+</body>
+</html>
